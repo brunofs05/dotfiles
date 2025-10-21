@@ -193,6 +193,11 @@ screenshot-path "~/Pictures/Screenshots/Screenshot-%Y%m%d-%H%M%S.png"
 // Asks new windows to disable its client-side decorations
 prefer-no-csd
 
+window-rule {
+    match is-focused=false
+    opacity 0.8
+}
+
 window-rule { // Launcher window
     match title="rofi"
     open-focused true
