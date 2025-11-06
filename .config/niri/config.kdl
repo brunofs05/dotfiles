@@ -10,6 +10,7 @@ input { keyboard {
 
     touchpad {
         tap
+        dwt
         natural-scroll
         // disabled-on-external-mouse
     }
@@ -61,7 +62,7 @@ layout {
 
     struts {
         top  -9 //-7
-        bottom  0 //-6
+        bottom  -7 //-6
         left 0
         right 0 // -1
         }
@@ -193,10 +194,10 @@ screenshot-path "~/Pictures/Screenshots/Screenshot-%Y%m%d-%H%M%S.png"
 // Asks new windows to disable its client-side decorations
 prefer-no-csd
 
-window-rule {
-    match is-focused=false
-    opacity 0.8
-}
+// window-rule {
+//     match is-focused=false
+//     opacity 0.8
+// }
 
 window-rule { // Launcher window
     match title="rofi"

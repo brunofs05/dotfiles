@@ -14,19 +14,31 @@ unsetopt BEEP
 function git_branch {
   if command git rev-parse --is-inside-work-tree &>/dev/null; then
     local branch=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null)
-    echo "%F{magenta}[$branch] %f"
+    echo "%F{magenta}[$branch] %f" # [main] (com espaço depois)
   else
-    echo ""  # nada se não for repositório git
+    echo "" # nada se não for repositório git
   fi
 }
 
-function precmd {
-  PROMPT_COLOR="%F{cyan}"
-  PROMPT=" ${PROMPT_COLOR}%F{#006BA6}%1~ $(git_branch)%F{cyan}▶%f "
-  # PROMPT=" ${PROMPT_COLOR}%F{#006BA6}%1~ $(git_branch)%F{cyan}➤%f "
-  # PROMPT=" ${PROMPT_COLOR}%F{#006BA6}%1~ $(git_branch)%F{cyan}󰘵%f "
+# Detecta o virtualenv do Python
+function python_venv {
+  # Verifica se a variável de ambiente $VIRTUAL_ENV está definida
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    # ${VIRTUAL_ENV:t} pega apenas o "tail" (nome base) do caminho
+    # Ex: /home/bruno/projetos/meu_app/venv -> venv
+    echo "%F{green}(${VIRTUAL_ENV:t})%f " # (venv) (com espaço depois)
+  else
+    echo "" # nada se não houver venv ativo
+  fi
 }
 
+# Define o prompt
+function precmd {
+  PROMPT_COLOR="%F{cyan}"
+  # Adicionamos $(python_venv) no início do PROMPT
+  # As funções git_branch e python_venv já incluem um espaço no final
+  PROMPT=" $(python_venv)${PROMPT_COLOR}%F{#006BA6}%1~ $(git_branch)%F{cyan}▶%f "
+}
 export LANG=pt_BR.cp1252
 export PATH=$PATH:/opt/android-sdk/platform-tools
 export EDITOR=helix
