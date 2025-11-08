@@ -31,7 +31,7 @@ output "eDP-1" {
 
 output "HDMI-A-1" {
     scale 0.8
-    mode "1920x1080@60.00"
+    mode "1920x1080@180.00"
     position x=0 y=0
 }
 
@@ -63,8 +63,8 @@ layout {
     struts {
         top  -9 //-7
         bottom  -7 //-6
-        left 0
-        right 0 // -1
+        left 20
+        right 20 // -1
         }
 
     background-color "transparent"
@@ -100,7 +100,7 @@ binds {
     ALt+Space { spawn "wofi" "--show" "drun"; }
     Mod+L { spawn "swaylock"; }
     Mod+F { spawn "firefox"; }
-    Mod+E { spawn "nemo"; }
+    Mod+E { spawn "nautilus"; }
     Mod+P { spawn "kitty" "--config" "/home/brunofs/.config/kitty/kitty-btop.conf" "-T" "btop" "-e" "btop"; }
     Mod+S { spawn "kitty" "-T" "wifi" "-e" "nmtui";}
     XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
@@ -189,7 +189,7 @@ hotkey-overlay {
     skip-at-startup
 }
 
-screenshot-path "~/Pictures/Screenshots/Screenshot-%Y%m%d-%H%M%S.png"
+screenshot-path "~/Pictures/screenshots/Screenshot-%Y%m%d-%H%M%S.png"
 
 // Asks new windows to disable its client-side decorations
 prefer-no-csd
