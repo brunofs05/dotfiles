@@ -6,10 +6,6 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 unsetopt BEEP
 
-# export PROMPT="%K{004} %1~%f %k%F{004}🭬%f "
-# export PROMPT="%F{cyan} %F{#006BA6}%~ %F{cyan}➤%f  "
-# export PROMPT="%F{cyan} %F{#006BA6}%1~ %F{cyan}▶%f  "
-
 # Função para exibir a branch Git (somente se dentro de repo Git)
 function git_branch {
   if command git rev-parse --is-inside-work-tree &>/dev/null; then
@@ -39,11 +35,13 @@ function precmd {
   # As funções git_branch e python_venv já incluem um espaço no final
   PROMPT=" $(python_venv)${PROMPT_COLOR}%F{#006BA6}%1~ $(git_branch)%F{cyan}▶%f "
 }
+
+
+
 export LANG=pt_BR.cp1252
 export PATH=$PATH:/opt/android-sdk/platform-tools
 export EDITOR=helix
-# export SUPABASE_URL=https://ruthohqabcbdblskofld.supabase.co
-# export SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ1dGhvaHFhYmNiZGJsc2tvZmxkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NzcyMDM4MSwiZXhwIjoyMDczMjk2MzgxfQ.Kr4AzkXAEQfeTo6vdVrw5f4XUvQrzJnUMSBVIJ5c7fU
+export XDG_CURRENT_DESKTOP="gnome"
 
 # Shortcuts legacy Spaniol
 alias cl='clear'
