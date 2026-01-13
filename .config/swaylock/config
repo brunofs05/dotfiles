@@ -1,0 +1,42 @@
+clock
+timestr=%R
+datestr=%a, %e of %b
+indicator
+
+image=/home/brunofs/Pictures/black.jpg
+# screenshot
+
+font=JetBrains Nerd Font
+font-size=100
+effect-blur=20x3
+# indicator-x-position=
+indicator-y-position=325
+indicator-radius=200
+indicator-thickness=15
+bs-hl-color=ffa06600
+inside-color=1f1f2800
+inside-clear-color=1f1f2800
+inside-caps-lock-color=1f1f2800
+inside-ver-color=1f1f2800
+inside-wrong-color=1f1f2800
+key-hl-color=7fb4ca
+line-color=1f1f2800
+line-clear-color=1f1f2800
+line-caps-lock-color=1f1f2800
+line-ver-color=1f1f2800
+line-wrong-color=1f1f2800
+ring-color=1f1f2800
+ring-clear-color=ffa06600
+ring-caps-lock-color=1f1f2800
+ring-ver-color=98bb6c00
+ring-wrong-color=ff000000
+separator-color=00000000
+text-color=dcd7ba
+text-clear-color=ffa066
+text-caps-lock-color=957fbb
+text-ver-color=dcd7ba00
+text-wrong-color=f7768e
+
+ignore-empty-password  
+indicator-caps-lock  
+
