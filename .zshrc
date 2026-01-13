@@ -77,7 +77,7 @@ alias mencl='sudo decode-dimms'
 alias vd='visidata'
 alias timg3='timg * --title --grid=3x'
 alias hate='systemctl hibernate'
-
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Color
 #alias ls='ls --color=auto'

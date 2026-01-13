@@ -4,3 +4,11 @@ no_actions=false
 term=alacritty
 mode=drun
 --show
+width=45%
+height=400
+
+# (center, top_left, bottom_right, etc)
+location=center
+
+# modo de correspondência
+matching=contains

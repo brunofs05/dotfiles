@@ -2,10 +2,15 @@ input { keyboard {
         xkb {
             // Change keyboard
             // layout "br"
-            layout "us_custom"
-            variant "intl_custom"
+            layout "us"
+            variant "intl"
             options "caps:swapescape" // not disable
         }
+    }
+
+    mouse {
+        accel-speed 0.1
+        accel-profile "flat"
     }
 
     touchpad {
@@ -23,14 +28,14 @@ output "eDP-1" {
     // off
     mode "1920x1080@60.00"
     position x=0 y=0
-    scale 1.0
+    scale 1.2
     // transform "90"
     // variable-refresh-rate // on-demand=true
     // background-color "#003300"
 }
 
 output "HDMI-A-1" {
-    scale 0.8
+    scale 1
     mode "1920x1080@180.00"
     position x=0 y=0
 }
@@ -97,12 +102,11 @@ binds {
     Alt+Y { toggle-windowed-fullscreen; }
     Alt+D { toggle-overview; }  
     Alt+Return { spawn "foot"; }
-    ALt+Space { spawn "wofi" "--show" "drun"; }
+    Alt+Space { spawn "wofi" "--show" "drun"; }
     Mod+L { spawn "swaylock"; }
-    Mod+F { spawn "firefox"; }
-    Mod+E { spawn "nautilus"; }
-    Mod+P { spawn "kitty" "--config" "/home/brunofs/.config/kitty/kitty-btop.conf" "-T" "btop" "-e" "btop"; }
-    Mod+S { spawn "kitty" "-T" "wifi" "-e" "nmtui";}
+    Alt+F { spawn "firefox"; }
+    Alt+E { spawn "nautilus"; }
+    Alt+S { spawn "foot" "-T" "wifi" "nmtui"; }
     XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
     XF86AudioLowerVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"; }
     XF86AudioMute        { spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
@@ -199,33 +203,17 @@ prefer-no-csd
 //     opacity 0.8
 // }
 
-window-rule { // Launcher window
-    match title="rofi"
-    open-focused true
-    open-floating true
-    open-fullscreen false
-    open-maximized false
-    default-floating-position x=0 y=0 
-    
-}
-
 window-rule { // Wi-fi manager window
-    match app-id="kitty" title="wifi"
+    match app-id="foot" title="wifi"
     open-floating true
-    default-window-height { fixed 550; }
-    default-column-width { fixed 550; }
+    default-window-height { fixed 600; }
+    default-column-width { fixed 600; }
 }
 
 window-rule { // Firefox PiP
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
 }
-
-window-rule { // ms edge by default float, switch this behavior
-    match app-id="edge"
-    open-floating false
-}
-
 
 window-rule { // Task manager
     match app-id="kitty" title="btop"
