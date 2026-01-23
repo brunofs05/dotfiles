@@ -1,0 +1,23 @@
+# Ignore all
+*
+
+# Include manual folders and files
+!.gitignore
+
+!.config/
+
+!.config/helix/
+!.config/helix/**
+!.config/waybar/
+!.config/waybar/**
+!.config/foot/
+!.config/foot/**
+!.config/niri/
+!.config/niri/**
+!.config/swaylock/
+!.config/swaylock/**
+
+
+!.config/systemd/user/swaybg.service
+
+!.zshrc
