@@ -1,0 +1,273 @@
+input { keyboard {
+        xkb {
+            // Change keyboard
+            // layout "br"
+            layout "us"
+            variant "intl"
+            options "caps:swapescape" // not disable
+        }
+    }
+
+    mouse {
+        accel-speed 0.1
+        accel-profile "flat"
+    }
+
+    touchpad {
+        tap
+        dwt
+        natural-scroll
+        // disabled-on-external-mouse
+    }
+
+    // Navigating into another window moves the cursor to its center
+    warp-mouse-to-focus
+}
+
+output "eDP-1" {
+    // off
+    mode "1920x1080@60.00"
+    position x=0 y=0
+    scale 1.2
+    // transform "90"
+    // variable-refresh-rate // on-demand=true
+    // background-color "#003300"
+}
+
+output "HDMI-A-1" {
+    scale 0.95
+    mode "1920x1080@180.00"
+    position x=0 y=0
+}
+
+layout {
+    always-center-single-column
+    gaps 11
+    default-column-width {
+        proportion 0.5
+    }
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        proportion 1.0
+    }
+
+    focus-ring {
+        width 1.5
+        active-color "#FFFFFF"
+    }
+
+    struts {
+        top  -9 //-7
+        bottom  -7 //-6
+        left 20
+        right 20 // -1
+        }
+
+    background-color "transparent"
+
+    tab-indicator {
+        active-color "#eee"
+        inactive-color "#96e7ff88"
+        width 6
+        gap 6
+        corner-radius 10
+        gaps-between-tabs 8
+        length total-proportion=0.2
+        place-within-column
+        hide-when-single-tab
+    }
+}
+
+cursor {
+    hide-after-inactive-ms 2300
+    hide-when-typing
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}
+
+binds {
+    Alt+Y { toggle-windowed-fullscreen; }
+    Alt+D { toggle-overview; }  
+    Alt+Return { spawn "foot"; }
+    Alt+Space { spawn "wofi" "--show" "drun"; }
+    Mod+L { spawn "swaylock"; }
+    Alt+F { spawn "firefox"; }
+    Alt+E { spawn "nautilus"; }
+    Alt+S { spawn "foot" "-T" "wifi" "nmtui"; }
+    XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
+    XF86AudioLowerVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"; }
+    XF86AudioMute        { spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
+    Alt+T { toggle-column-tabbed-display; }
+
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-"; }
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "5%+"; }
+    Alt+Shift+m { spawn "brightnessctl" "set" "1%";}
+
+
+    Alt+Shift+Q { close-window; }
+
+    Alt+H { focus-column-left; }
+    Alt+J { focus-window-down; }
+    Alt+K { focus-window-up; }
+    Alt+L { focus-column-right; }
+
+    Alt+Shift+H { move-column-left; }
+    Alt+Shift+J { move-window-down; }
+    Alt+Shift+K { move-window-up; }
+    Alt+Shift+L { move-column-right; }
+
+    Alt+1 { focus-workspace 1; }
+    Alt+2 { focus-workspace 2; }
+    Alt+3 { focus-workspace 3; }
+    Alt+4 { focus-workspace 4; }
+    Alt+5 { focus-workspace 5; }
+    Alt+6 { focus-workspace 6; }
+    Alt+7 { focus-workspace 7; }
+    Alt+8 { focus-workspace 8; }
+    Alt+9 { focus-workspace 9; }
+
+    Alt+Shift+1 { move-column-to-workspace 1; }
+    Alt+Shift+2 { move-column-to-workspace 2; }
+    Alt+Shift+3 { move-column-to-workspace 3; }
+    Alt+Shift+4 { move-column-to-workspace 4; }
+    Alt+Shift+5 { move-column-to-workspace 5; }
+    Alt+Shift+6 { move-column-to-workspace 6; }
+    Alt+Shift+7 { move-column-to-workspace 7; }
+    Alt+Shift+8 { move-column-to-workspace 8; }
+    Alt+Shift+9 { move-column-to-workspace 9; }
+
+    Alt+Tab { focus-workspace-previous; }
+    Mod+1 { focus-column-left; }
+
+    Mod+2 { focus-column-right; }
+
+    // Moves a window left or right, but allows it to be consumed into columns
+    // in its way
+    Alt+N  { consume-or-expel-window-left; }
+    Alt+M { consume-or-expel-window-right; }
+
+    Alt+P { maximize-column; }
+    Alt+Shift+F { fullscreen-window; }
+
+    Alt+C { center-window; }
+
+    // Column width
+    Alt+Minus { set-column-width "-10%"; }
+    Alt+Equal { set-column-width "+10%"; }
+
+    // Window height
+    Alt+Shift+Minus { set-window-height "-10%"; }
+    Alt+Shift+Equal { set-window-height "+10%"; }
+
+    // Floating window behaviour
+    Alt+Shift+W { toggle-window-floating; }
+
+    Alt+W       { switch-focus-between-floating-and-tiling; }
+
+    // Toggle between the configured window/column heights and widths
+    Alt+R       { switch-preset-column-width; }
+    Alt+Shift+R { switch-preset-window-height; }
+
+    // Exit Niri (spawns prompt asking for confirmation)
+    Alt+Shift+E { quit; }
+
+    // Screenshots
+    Print { spawn "/home/brunofs/screenshot.sh"; }
+    Alt+Print { spawn "/home/brunofs/screenshot_all.sh"; }
+}
+// Disable the popup at the startup showing Niri's keybinds
+hotkey-overlay {
+    skip-at-startup
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot-%Y%m%d-%H%M%S.png"
+
+// Asks new windows to disable its client-side decorations
+prefer-no-csd
+
+// window-rule {
+//     match is-focused=false
+//     opacity 0.8
+// }
+
+window-rule { // Wi-fi manager window
+    match app-id="foot" title="wifi"
+    open-floating true
+    default-window-height { fixed 600; }
+    default-column-width { fixed 600; }
+}
+
+window-rule { // Firefox PiP
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true
+}
+
+window-rule { // Task manager
+    match app-id="kitty" title="btop"
+    open-floating true
+    
+    default-window-height { fixed 340; }
+    default-column-width { fixed 450; }
+    default-floating-position x=25 y=25 relative-to="top-right"
+}
+
+window-rule { // All windows
+    geometry-corner-radius 6 // 8
+    clip-to-geometry true
+}
+
+// Make swaybg and waybar both stay in place when I change workspaces
+
+
+layer-rule {
+    match namespace="^wallpaper$"
+    match namespace="waybar"
+    match at-startup=true
+    place-within-backdrop true
+}
+
+overview {
+    workspace-shadow {
+        softness 50
+        spread 50
+        offset x=0 y=0
+        color "#00000044"
+ 
+    }
+}
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "waybar"
+spawn-at-startup "make"
+
+environment {
+    // # XWayland
+    DISPLAY ":0"
+
+    // # Para forçar o uso de XWayland com Steam
+    STEAM_USE_X11 "1"
+    // # Para evitar crash no client
+    STEAM_FORCE_DESKTOPUI_SCALING "1"
+    // # Para evitar problemas com Qt em Wayland
+    QT_QPA_PLATFORM "xcb"
+}
+
+animations {
+    // off
+    workspace-switch {
+            spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+            // off
+    }
+}

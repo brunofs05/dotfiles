@@ -1,0 +1,95 @@
+{
+  // "position": "bottom",
+  "layer": "top",
+  "height": 35,
+  "spacing": 4,
+  "modules-left": [
+    // "bluetooth",
+    // "custom/music",
+    "niri/workspaces",
+  ],
+  "modules-center": [
+    "clock",
+  ],
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "battery",
+  ],
+  "custom/music": {
+    "format": "   {} ",
+    "escape": true,
+    "interval": 2,
+    "tooltip": "{}",
+    "exec": "playerctl metadata --format='{{ title }}'",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "max-length": 21
+  },
+  "bluetooth": {
+    "format": "  {status} ",
+    "format-connected": "  {device_alias} ",
+    "format-off": " 󰂲 {status} ",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+    "on-click-right": "bluetoothctl power on",
+    "on-click-middle": "bluetoothctl power off",
+    "on-click": "blueman-manager"
+  },
+  "network": {
+    "format": " {essid} ",
+    "tooltip-format": " {ipaddr} / {signalStrength}% ",
+    // "format-disconnected": " 󰤮  ",
+    "max-length": 30,
+    "on-click": "foot -T wifi nmtui"
+  },
+  "pulseaudio": {
+    "format": " {icon} {volume}% ",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        " "
+      ],
+      "headphone": "",
+      "headset": "",
+    },
+    "on-click": "pavucontrol"
+  },
+  "clock": {
+    "format": " {:%H:%M} ",
+    "tooltip-format": " {:%d/%m/%Y} ",
+    "interval": 60,
+    "on-click": "playerctl play-pause",
+
+  },
+  "cpu": {
+    "states": {
+      "high": 80,
+    },
+    "format": "   {usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "   {}% "
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": " {temperatureC}°C ",
+    "tooltip": false
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": " 󱟤 {capacity}% ",
+    "format-charging": "  {capacity}% ",
+    "format-full": " 󰁹 {capacity}% ",
+    "format-plugged": " 󰂋 {capacity}% ",
+    "interval": 2,
+  },
+  "escape": true,
+}

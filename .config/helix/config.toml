@@ -1,0 +1,14 @@
+theme = "autumn_night"
+
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+git-ignore = true
+hidden = false
+
+# "d" copies the deleted content by default; I disabled this behaviour
+[keys.normal]
+"d" = "delete_selection_noyank"
+"c" = "change_selection_noyank"
