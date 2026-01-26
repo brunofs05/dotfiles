@@ -1,5 +1,6 @@
 # Ignore all
 *
+!*/
 
 # Include manual folders and files
 !.gitignore
@@ -16,7 +17,6 @@
 !.config/niri/**
 !.config/swaylock/
 !.config/swaylock/**
-
 
 !.config/systemd/user/swaybg.service
 
