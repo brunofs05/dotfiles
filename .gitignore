@@ -18,5 +18,7 @@
 !.config/swaylock/
 !.config/swaylock/**
 
+!.config/systemd/
+!.config/systemd/user/
 !.config/systemd/user/swaybg.service
 
