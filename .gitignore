@@ -1,9 +1,9 @@
 # Ignore all
 *
-!*/
 
 # Include manual folders and files
 !.gitignore
+!.zshrc
 
 !.config/
 
@@ -20,4 +20,3 @@
 
 !.config/systemd/user/swaybg.service
 
-!.zshrc
