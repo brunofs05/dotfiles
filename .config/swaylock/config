@@ -3,7 +3,7 @@ timestr=%R
 datestr=%a, %e of %b
 indicator
 
-image=/home/brunofs/Pictures/black.jpg
+image=/home/brunofs/Pictures/lockscreen.png
 # screenshot
 
 font=JetBrains Nerd Font

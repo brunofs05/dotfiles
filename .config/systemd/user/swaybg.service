@@ -8,7 +8,7 @@ Type=simple
 # ExecStart=/usr/bin/swaybg -m fill -i "/home/brunofs/core/imagens/wpp29.jpg"
 # ExecStart=/usr/bin/swaybg -m fill -i "/home/brunofs/core/imagens/planet.jpg"
 # ExecStart=/usr/bin/swaybg -m fill -i "/home/brunofs/Downloads/bd-coffee.jpg"
-ExecStart=/usr/bin/swaybg -m fill -i "/home/brunofs/Downloads/m2.jpg"
+ExecStart=/usr/bin/swaybg -m fill -i "/home/brunofs/Pictures/wallpaper.jpg"
 
 Restart=on-failure
 
