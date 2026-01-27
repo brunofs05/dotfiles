@@ -248,9 +248,12 @@ overview {
  
     }
 }
+
+
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
 spawn-at-startup "make"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/brunofs/Pictures/wallpaper.jpg"
 
 environment {
     // # XWayland
