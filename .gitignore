@@ -6,6 +6,7 @@
 !.zshrc
 
 !.config/
+!Pictures/
 
 !.config/helix/
 !.config/helix/**
@@ -22,3 +23,6 @@
 !.config/systemd/user/swaybg.service
 !.config/images/
 !.config/images/**
+
+!Pictures/lockscreen.png
+!Pictures/wallpaper.jpg
