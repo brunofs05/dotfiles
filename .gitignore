@@ -17,6 +17,9 @@
 !.config/niri/**
 !.config/swaylock/
 !.config/swaylock/**
+!Pictures/
+!Pictures/lockscreen.png
+!Pictures/wallpaper.jpg
 
 !.config/systemd/
 !.config/systemd/user/
