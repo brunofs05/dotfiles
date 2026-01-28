@@ -6,8 +6,6 @@
 !.zshrc
 
 !.config/
-!Pictures/
-
 !.config/helix/
 !.config/helix/**
 !.config/waybar/
@@ -21,5 +19,10 @@
 !.config/images/
 !.config/images/**
 
+!.local/
+!.local/bin/
+!.local/bin/**
+
+!Pictures/
 !Pictures/lockscreen.png
 !Pictures/wallpaper.jpg

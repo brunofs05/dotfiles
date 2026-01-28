@@ -25,7 +25,7 @@ input { keyboard {
 }
 
 output "eDP-1" {
-    // off
+    off
     mode "1920x1080@60.00"
     position x=0 y=0
     scale 1.2
@@ -185,8 +185,8 @@ binds {
     Alt+Shift+E { quit; }
 
     // Screenshots
-    Print { spawn "/home/brunofs/screenshot.sh"; }
-    Alt+Print { spawn "/home/brunofs/screenshot_all.sh"; }
+    Print { spawn "/home/brunofs/.local/bin/screenshot.sh"; }
+    Alt+Print { spawn "/home/brunofs/.local/bin/screenshot_all.sh"; }
 }
 // Disable the popup at the startup showing Niri's keybinds
 hotkey-overlay {
