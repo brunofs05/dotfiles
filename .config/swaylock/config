@@ -7,7 +7,7 @@ image=/home/brunofs/Pictures/lockscreen.png
 # screenshot
 
 font=JetBrains Nerd Font
-font-size=100
+font-size=55
 effect-blur=20x3
 # indicator-x-position=
 indicator-y-position=325
