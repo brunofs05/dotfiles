@@ -4,6 +4,7 @@
 # Include manual folders and files
 !.gitignore
 !.zshrc
+!packages.txt
 
 !.config/
 !.config/helix/

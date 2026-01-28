@@ -1,0 +1,3 @@
+pacman: niri waybar helix brightnessctl exa wl-mirror grim slurp satty wl-clipboard swaybg
+
+yay: swaylock-effects
