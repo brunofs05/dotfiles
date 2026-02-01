@@ -1,3 +1,3 @@
-pacman: niri waybar helix brightnessctl exa wl-mirror grim slurp satty wl-clipboard swaybg
+pacman: niri waybar helix brightnessctl exa wl-mirror grim slurp satty wl-clipboard swaybg wofi foot gsettings-desktop-schemas gnome-themes-extra
 
 yay: swaylock-effects
