@@ -19,6 +19,8 @@
 !.config/swaylock/**
 !.config/images/
 !.config/images/**
+!.config/wofi/
+!.config/wofi/**
 
 !.local/
 !.local/bin/

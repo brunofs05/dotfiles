@@ -1,0 +1,52 @@
+window {
+    margin: 0px;
+    border: 1px solid #333333; /* borda sutil para separar do fundo */
+    background-color: #1e1e1e; /* fundo escuro solido */
+    border-radius: 8px; /* leve arredondamento */
+    font-family: "JetBrainsMono Nerd Font", monospace; 
+    font-size: 15px;
+}
+
+/* Input */
+#input {
+    margin: 5px;
+    border: none;
+    color: #f8f8f2;
+    background-color: #2d2d2d; 
+    border-radius: 4px;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+/* itens da lista */
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #cccccc; 
+}
+
+/* item selecionado */
+#entry:selected {
+    background-color: #3e3e3e; 
+    border-radius: 4px;
+    border: none;
+}
+
+#text:selected {
+    color: #ffffff; 
+}

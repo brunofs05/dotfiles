@@ -1,0 +1,19 @@
+# Configuração Geral
+mode=drun
+show=drun
+width=34%
+height=34%
+location=center
+
+# Comportamento
+# prompt=Search...
+filter_rate=100
+allow_markup=true
+no_actions=true
+halign=fill
+orientation=vertical
+content_halign=fill
+insensitive=true
+allow_images=true
+image_size=24
+gtk_dark=true
