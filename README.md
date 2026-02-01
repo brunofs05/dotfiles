@@ -20,3 +20,11 @@ GRUB_DISABLE_OS_PROBER=false
 ```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
+### Put system in darkmode:
+```
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+```
+
+### 
