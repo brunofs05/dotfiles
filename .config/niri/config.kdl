@@ -68,8 +68,8 @@ layout {
     struts {
         top  -9 //-7
         bottom  -7 //-6
-        left 20
-        right 20 // -1
+        left 8
+        right 8 // -1
         }
 
     background-color "transparent"
@@ -104,8 +104,8 @@ binds {
     Alt+Return { spawn "foot"; }
     Alt+Space { spawn "wofi" "--show" "drun"; }
     Mod+L { spawn "swaylock"; }
-    Alt+F { spawn "firefox"; }
-    Alt+E { spawn "nautilus"; }
+    Mod+F { spawn "firefox"; }
+    Mod+E { spawn "nautilus"; }
     Alt+S { spawn "foot" "-T" "wifi" "nmtui"; }
     XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
     XF86AudioLowerVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"; }
