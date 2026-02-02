@@ -25,7 +25,7 @@ input { keyboard {
 }
 
 output "eDP-1" {
-    off
+    // off
     mode "1920x1080@60.00"
     position x=0 y=0
     scale 1.2
