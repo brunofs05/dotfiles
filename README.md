@@ -9,14 +9,14 @@ git checkout -f master
 ```
 
 ### If i will use dual-boot linux/windows + grub:
-```bash
+```
 sudo pacman -S os-prober ntfs-3g
 ```
 
 Edit /etc/default/grub and comment or add the line:
 
 GRUB_DISABLE_OS_PROBER=false
-```bash
+```
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
@@ -33,7 +33,7 @@ sudo systemctl enable --now keyd
 ```
 
 Create or edit /etc/keyd/default.conf with this content:
-```toml
+```
 [ids]
 *
 
@@ -43,3 +43,13 @@ ro = slash
 ```
 sudo keyd reload
 ```
+
+### Install and configure drivers for gtx 1080 ti (eGPU)
+```
+# or headers equivalent
+sudo pacman -S linux-zen-headers 
+
+yay -S nvidia-580xx-dkms nvidia-580xx-utils
+
+sudo mkinitcpio -P
+``
