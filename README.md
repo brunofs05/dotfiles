@@ -52,4 +52,4 @@ sudo pacman -S linux-zen-headers
 yay -S nvidia-580xx-dkms nvidia-580xx-utils
 
 sudo mkinitcpio -P
-``
+```
