@@ -36,8 +36,6 @@ function precmd {
   PROMPT=" $(python_venv)${PROMPT_COLOR}%F{#006BA6}%1~ $(git_branch)%F{cyan}▶%f "
 }
 
-
-
 export LANG=pt_BR.cp1252
 export PATH=$PATH:/opt/android-sdk/platform-tools
 export EDITOR=helix
