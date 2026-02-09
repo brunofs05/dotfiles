@@ -25,7 +25,7 @@ input { keyboard {
 }
 
 output "eDP-1" {
-    // off
+    off
     mode "1920x1080@60.00"
     position x=0 y=0
     scale 1.2
@@ -34,9 +34,14 @@ output "eDP-1" {
     // background-color "#003300"
 }
 
+output "DP-6" {
+    mode "1920x1080@143.981"
+    position x=0 y=0
+}
+
 output "HDMI-A-1" {
     scale 0.95
-    mode "1920x1080@180.00"
+    mode "1920x1080@60.00"
     position x=0 y=0
 }
 
@@ -66,7 +71,7 @@ layout {
     }
 
     struts {
-        top  -9 //-7
+        top  -12 //-7
         bottom  -7 //-6
         left 8
         right 8 // -1
