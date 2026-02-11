@@ -39,12 +39,14 @@
     "on-click": "blueman-manager"
   },
   "network": {
-    "format": " {essid} ",
+    "format-wifi": " {essid} ",
+    "format-ethernet": " 󰈀  {ipaddr} ", // Ícone de cabo da NerdFont
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "", // Deixe vazio para não aparecer nada se cair
     "tooltip-format": " {ipaddr} / {signalStrength}% ",
-    // "format-disconnected": " 󰤮  ",
     "max-length": 30,
     "on-click": "foot -T wifi nmtui"
-  },
+    },
   "pulseaudio": {
     "format": " {icon} {volume}% ",
     "format-icons": {
