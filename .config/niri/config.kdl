@@ -97,11 +97,11 @@ cursor {
     hide-when-typing
 }
 
-gestures {
-    hot-corners {
-        off
-    }
-}
+// gestures {
+//     hot-corners {
+//         off
+//     }
+// }
 
 binds {
     Alt+Y { toggle-windowed-fullscreen; }
