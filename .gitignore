@@ -1,5 +1,6 @@
 # Ignore all
 *
+.local/bin/claude
 
 # Include manual folders and files
 !.gitignore
