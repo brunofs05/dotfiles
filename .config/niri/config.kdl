@@ -24,6 +24,12 @@ input { keyboard {
     warp-mouse-to-focus
 }
 
+output "DP-1" {
+    mode "1920x1080@60.00"
+    position x=0 y=0
+    scale 1.0
+}
+
 output "eDP-1" {
     off
     mode "1920x1080@60.00"
