@@ -1,6 +1,6 @@
 # Ignore all
 *
-.local/bin/claude
+.local/bin/*
 
 # Include manual folders and files
 !.gitignore
@@ -23,9 +23,7 @@
 !.config/wofi/
 !.config/wofi/**
 
-!.local/
-!.local/bin/
-!.local/bin/**
+!.local/bin/screenshot*.sh
 
 !Pictures/
 !Pictures/lockscreen.png
