@@ -39,6 +39,7 @@ function precmd {
 export PATH=$PATH:/opt/android-sdk/platform-tools
 export EDITOR=helix
 export XDG_CURRENT_DESKTOP="gnome"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Shortcuts legacy Spaniol
 alias cl='clear'
@@ -74,10 +75,4 @@ alias mencl='sudo decode-dimms'
 alias vd='visidata'
 alias timg3='timg * --title --grid=3x'
 alias hate='systemctl hibernate'
-
-# Color
-#alias ls='ls --color=auto'
-
-export PATH="$HOME/.local/bin:$PATH"
-
-. "$HOME/.local/bin/env"
+alias dbeaver='DISPLAY=:0 dbeaver'
