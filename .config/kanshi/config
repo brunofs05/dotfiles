@@ -1,0 +1,22 @@
+# Perfil 1: Apenas o Notebook (Desplugado)
+profile mobile {
+    output eDP-1 enable mode 1920x1080@60.00 scale 1.2
+}
+
+# Perfil 2: eGPU conectada (A prioridade é desligar a tela interna)
+profile egpu_desk {
+    output eDP-1 disable
+    output DP-6 enable mode 1920x1080@179.961 position 0,0
+}
+
+# Perfil 3: Trabalho via Dell (DP-1)
+profile work_desk {
+    output eDP-1 disable
+    output DP-1 enable mode 1920x1080@60.00 scale 1.0 position 0,0
+}
+
+# Perfil 4: Monitor HP direto na HDMI
+profile hdmi_desk {
+    output eDP-1 disable
+    output HDMI-A-1 enable mode 1920x1080@179.961 scale 1.0 position 0,0
+}

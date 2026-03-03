@@ -22,6 +22,8 @@
 !.config/images/**
 !.config/wofi/
 !.config/wofi/**
+!.config/kanshi/
+!.config/kanshi/**
 
 !.local/bin/screenshot*.sh
 
