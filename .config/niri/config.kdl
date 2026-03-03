@@ -24,12 +24,14 @@ input { keyboard {
     warp-mouse-to-focus
 }
 
+// work monitor (dell 27p FHD)
 output "DP-1" {
     mode "1920x1080@60.00"
     position x=0 y=0
     scale 1.0
 }
 
+// internal screen of notebook hp (personal computer)
 output "eDP-1" {
     off
     mode "1920x1080@60.00"
@@ -40,11 +42,13 @@ output "eDP-1" {
     // background-color "#003300"
 }
 
+// external screen by eGPU DP (LG 24p FHD)
 output "DP-6" {
     mode "1920x1080@179.961"
     position x=0 y=0
 }
 
+// external screen by hp (LG 24p FHD)
 output "HDMI-A-1" {
     scale 1
     mode "1920x1080@179.961"
