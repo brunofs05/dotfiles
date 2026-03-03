@@ -31,11 +31,11 @@ case "$CHOSEN" in
         wlr-randr --output eDP-1 --on --pos 0,0
 
         if echo "$STATUS" | grep -q "^DP-6"; then
-            wlr-randr --output DP-6 --on --pos 1920,0
+            wlr-randr --output DP-6 --on --pos 0,0
         elif echo "$STATUS" | grep -q "^DP-1"; then
-            wlr-randr --output DP-1 --on --pos 1920,0
+            wlr-randr --output DP-1 --on --pos 0,0
         elif echo "$STATUS" | grep -q "^HDMI-A-1"; then
-            wlr-randr --output HDMI-A-1 --on --pos 1920,0
+            wlr-randr --output HDMI-A-1 --on --pos 0,0
         fi
         ;;
 esac
