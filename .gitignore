@@ -24,8 +24,14 @@
 !.config/wofi/**
 !.config/kanshi/
 !.config/kanshi/**
+!.config/fuzzel/
+!.config/fuzzel/**
 
-!.local/bin/screenshot*.sh
+
+!.local/
+!.local/bin/
+!.local/bin/*.sh
+!.local/bin/win-p.sh
 
 !Pictures/
 !Pictures/lockscreen.png

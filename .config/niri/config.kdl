@@ -118,14 +118,19 @@ binds {
     Alt+D { toggle-overview; }  
     Alt+Return { spawn "foot"; }
     Alt+Space { spawn "wofi" "--show" "drun"; }
+
     Mod+L { spawn "swaylock"; }
     Mod+F { spawn "firefox"; }
     Mod+E { spawn "nautilus"; }
+    Mod+P { spawn "bash" "-c" "~/.local/bin/win-p.sh"; }
+
     Alt+S { spawn "foot" "-T" "wifi" "nmtui"; }
+    Alt+T { toggle-column-tabbed-display; }
+
     XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
     XF86AudioLowerVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"; }
     XF86AudioMute        { spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
-    Alt+T { toggle-column-tabbed-display; }
+
 
     XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-"; }
     XF86MonBrightnessUp { spawn "brightnessctl" "set" "5%+"; }
