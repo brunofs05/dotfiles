@@ -5,7 +5,7 @@
 # Include manual folders and files
 !.gitignore
 !.zshrc
-!packages.txt
+!.XCompose
 
 !.config/
 !.config/helix/
@@ -32,6 +32,7 @@
 !.local/bin/
 !.local/bin/*.sh
 !.local/bin/win-p.sh
+!.local/bin/packages.txt
 
 !Pictures/
 !Pictures/lockscreen.png
