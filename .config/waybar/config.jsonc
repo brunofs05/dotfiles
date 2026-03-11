@@ -4,9 +4,10 @@
   "height": 35,
   "spacing": 4,
   "modules-left": [
-    // "bluetooth",
     // "custom/music",
     "niri/workspaces",
+    "bluetooth",
+
   ],
   "modules-center": [
     "clock",
@@ -27,9 +28,9 @@
     "max-length": 21
   },
   "bluetooth": {
-    "format": "  {status} ",
-    "format-connected": "  {device_alias} ",
-    "format-off": " 󰂲 {status} ",
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-off": "󰂲 {status}",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
