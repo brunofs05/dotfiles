@@ -4,19 +4,31 @@
   "height": 35,
   "spacing": 4,
   "modules-left": [
+    // "bluetooth",
     // "custom/music",
-    "niri/workspaces",
-    "bluetooth",
-
+    "niri/workspaces"
   ],
   "modules-center": [
-    "clock",
+    "group/clock_bt"
   ],
   "modules-right": [
     "network",
     "pulseaudio",
-    "battery",
+    "battery"
   ],
+
+  "group/clock_bt": {
+    "orientation": "horizontal",
+    "drawer": {
+        "transition-duration": 300,
+        "transition-left-to-right": true
+    },
+    "modules": [
+        "clock",     // O primeiro item da lista é sempre o líder (visível)
+        "bluetooth"  // Os próximos ficam ocultos até o hover no líder
+    ]
+  },
+
   "custom/music": {
     "format": "   {} ",
     "escape": true,
@@ -28,9 +40,9 @@
     "max-length": 21
   },
   "bluetooth": {
-    "format": " {status}",
-    "format-connected": " {device_alias}",
-    "format-off": "󰂲 {status}",
+    "format": "  {status} ",
+    "format-connected": "  {device_alias} ",
+    "format-off": " 󰂲 {status} ",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
@@ -47,7 +59,7 @@
     "tooltip-format": " {ipaddr} / {signalStrength}% ",
     "max-length": 30,
     "on-click": "foot -T wifi nmtui"
-    },
+  },
   "pulseaudio": {
     "format": " {icon} {volume}% ",
     "format-icons": {
@@ -57,7 +69,7 @@
         " "
       ],
       "headphone": "",
-      "headset": "",
+      "headset": ""
     },
     "on-click": "pavucontrol"
   },
@@ -65,12 +77,11 @@
     "format": " {:%H:%M} ",
     "tooltip-format": " {:%d/%m/%Y} ",
     "interval": 60,
-    "on-click": "playerctl play-pause",
-
+    "on-click": "playerctl play-pause"
   },
   "cpu": {
     "states": {
-      "high": 80,
+      "high": 80
     },
     "format": "   {usage}% ",
     "tooltip": false
@@ -92,7 +103,7 @@
     "format-charging": "  {capacity}% ",
     "format-full": " 󰁹 {capacity}% ",
     "format-plugged": " 󰂋 {capacity}% ",
-    "interval": 2,
+    "interval": 2
   },
-  "escape": true,
+  "escape": true
 }
