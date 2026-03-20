@@ -49,7 +49,7 @@
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
     "on-click-right": "bluetoothctl power on",
     "on-click-middle": "bluetoothctl power off",
-    "on-click": "blueman-manager"
+    "on-click": "playerctl play-pause"
   },
   "network": {
     "format-wifi": " {essid} ",
