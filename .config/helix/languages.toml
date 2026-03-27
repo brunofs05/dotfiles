@@ -1,16 +1,11 @@
-[language-server.clangd]
-command = "clangd"
-# Injeta o estilo LLVM como base, mas sobrescreve a largura da indentação para 4
-args = ["--fallback-style={BasedOnStyle: llvm, IndentWidth: 4}"]
-
 [[language]]
 name = "c"
-auto-format = true
+auto-format = false
 language-servers = ["clangd"]
 indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "cpp"
-auto-format = true
+auto-format = false
 language-servers = ["clangd"]
 indent = { tab-width = 4, unit = "    " }
