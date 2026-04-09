@@ -116,7 +116,7 @@ cursor {
 binds {
     Alt+Y { toggle-windowed-fullscreen; }
     Alt+D { toggle-overview; }  
-    Alt+Return { spawn "foot"; }
+    Alt+Return { spawn "kitty"; }
     Alt+Space { spawn "wofi" "--show" "drun"; }
 
     Mod+L { spawn "swaylock"; }
@@ -244,10 +244,18 @@ window-rule { // Task manager
     default-floating-position x=25 y=25 relative-to="top-right"
 }
 
+window-rule {
+    match app-id="helix"
+    opacity 0.85
+    draw-border-with-background false
+}
+
 window-rule { // All windows
+    draw-border-with-background false
     geometry-corner-radius 6 // 8
     clip-to-geometry true
 }
+
 
 // Make swaybg and waybar both stay in place when I change workspaces
 

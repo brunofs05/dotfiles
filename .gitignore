@@ -26,7 +26,8 @@
 !.config/kanshi/**
 !.config/fuzzel/
 !.config/fuzzel/**
-
+!.config/kitty/
+!.config/kitty/**
 
 !.local/
 !.local/bin/
