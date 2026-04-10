@@ -124,7 +124,7 @@ binds {
     Mod+E { spawn "nautilus"; }
     Mod+P { spawn "bash" "-c" "~/.local/bin/win-p.sh"; }
 
-    Alt+S { spawn "foot" "-T" "wifi" "nmtui"; }
+    Alt+S { spawn "kitty" "-T" "wifi" "nmtui"; }
     Alt+T { toggle-column-tabbed-display; }
 
     XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
@@ -224,7 +224,7 @@ prefer-no-csd
 // }
 
 window-rule { // Wi-fi manager window
-    match app-id="foot" title="wifi"
+    match app-id="kitty" title="wifi"
     open-floating true
     default-window-height { fixed 600; }
     default-column-width { fixed 600; }
@@ -244,11 +244,6 @@ window-rule { // Task manager
     default-floating-position x=25 y=25 relative-to="top-right"
 }
 
-window-rule {
-    match app-id="helix"
-    opacity 0.85
-    draw-border-with-background false
-}
 
 window-rule { // All windows
     draw-border-with-background false
@@ -259,13 +254,13 @@ window-rule { // All windows
 
 // Make swaybg and waybar both stay in place when I change workspaces
 
-
 layer-rule {
     match namespace="^wallpaper$"
     match namespace="waybar"
     match at-startup=true
     place-within-backdrop true
 }
+
 
 overview {
     workspace-shadow {
