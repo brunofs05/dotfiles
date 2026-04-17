@@ -40,3 +40,5 @@
 !Pictures/wallpaper.jpg
 
 !android-custom-rom-notes.md
+!.config/fastfetch/
+!.config/fastfetch/**
