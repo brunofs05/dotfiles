@@ -1,3 +1,12 @@
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+
+setopt INC_APPEND_HISTORY     
+setopt SHARE_HISTORY          
+setopt HIST_IGNORE_ALL_DUPS   
+setopt HIST_IGNORE_SPACE
+
 # Autocomplete
 autoload -Uz compinit
 compinit
