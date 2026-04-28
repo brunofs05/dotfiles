@@ -170,8 +170,8 @@ binds {
     Alt+Shift+9 { move-column-to-workspace 9; }
 
     Alt+Tab { focus-workspace-previous; }
-    Mod+1 { focus-column-left; }
 
+    Mod+1 { focus-column-left; }
     Mod+2 { focus-column-right; }
 
     // Moves a window left or right, but allows it to be consumed into columns
@@ -207,6 +207,8 @@ binds {
     // Screenshots
     Print { spawn "/home/brunofs/.local/bin/screenshot.sh"; }
     Mod+Print { spawn "/home/brunofs/.local/bin/screenshot_edit.sh"; }
+    Alt+Shift+S { spawn "/home/brunofs/.local/bin/screenshot.sh"; } // librewolf keyboard dont have PrtScn
+
 }
 // Disable the popup at the startup showing Niri's keybinds
 hotkey-overlay {
