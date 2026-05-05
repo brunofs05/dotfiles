@@ -6,7 +6,7 @@ profile mobile {
 # Perfil 2: eGPU conectada (A prioridade é desligar a tela interna)
 profile egpu_desk {
     output eDP-1 disable
-    output DP-6 enable mode 1920x1080@179.961 position 0,0
+    output DP-2 enable mode 1920x1080@179.961 position 0,0
 }
 
 # Perfil 3: Trabalho via Dell (DP-1)
