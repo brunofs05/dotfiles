@@ -124,7 +124,7 @@ binds {
     Mod+E { spawn "nautilus"; }
     Mod+P { spawn "bash" "-c" "~/.local/bin/win-p.sh"; }
 
-    Alt+S { spawn "kitty" "-T" "wifi" "nmtui"; }
+    Alt+S { spawn "kitty" "-c" "/home/brunofs/.config/kitty/kitty-wlctl.conf" "-T" "wifi" "wlctl"; }
     Alt+T { toggle-column-tabbed-display; }
 
     XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
