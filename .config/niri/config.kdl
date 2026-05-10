@@ -291,7 +291,14 @@ environment {
     // # Para evitar crash no client
     STEAM_FORCE_DESKTOPUI_SCALING "1"
     // # Para evitar problemas com Qt em Wayland
-    QT_QPA_PLATFORM "xcb"
+    QT_QPA_PLATFORM "wayland;xcb"
+
+    LIBVA_DRIVER_NAME "nvidia"
+    __GLX_VENDOR_LIBRARY_NAME "nvidia"
+    __NV_PRIME_RENDER_OFFLOAD "1"
+    __VK_LAYER_NV_optimus "NVIDIA_only"
+    GBM_BACKEND "nvidia-drm"
+    NVD_BACKEND "direct"
 }
 
 animations {
