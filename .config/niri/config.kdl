@@ -24,6 +24,12 @@ input { keyboard {
     warp-mouse-to-focus
 }
 
+output "DP-2" {
+    variable-refresh-rate
+    mode "1920x1080@179.961"
+
+}
+
 // // work monitor (dell 27p FHD)
 // output "DP-1" {
 //     mode "1920x1080@60.00"
@@ -120,11 +126,13 @@ binds {
     Alt+Space { spawn "wofi" "--show" "drun"; }
 
     Mod+L { spawn "swaylock"; }
-    Mod+F { spawn "firefox"; }
+    Mod+F { spawn "librewolf"; }
     Mod+E { spawn "nautilus"; }
     Mod+P { spawn "bash" "-c" "~/.local/bin/win-p.sh"; }
 
-    Alt+S { spawn "kitty" "-c" "/home/brunofs/.config/kitty/kitty-wlctl.conf" "-T" "wifi" "wlctl"; }
+    Mod+S { spawn "kitty" "-c" "/home/brunofs/.config/kitty/kitty-wlctl.conf" "-T" "wifi" "wlctl"; }
+    Mod+B { spawn "kitty" "-c" "/home/brunofs/.config/kitty/kitty-wlctl.conf" "-T" "blue" "bluetui"; }
+
     Alt+T { toggle-column-tabbed-display; }
 
     XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
@@ -232,6 +240,13 @@ window-rule { // Wi-fi manager window
     default-column-width { fixed 600; }
 }
 
+window-rule { // Wi-fi manager window
+    match app-id="kitty" title="blue"
+    open-floating true
+    default-window-height { fixed 600; }
+    default-column-width { fixed 600; }
+}
+
 window-rule { // Firefox PiP
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     open-floating true
@@ -295,9 +310,6 @@ environment {
 
     LIBVA_DRIVER_NAME "nvidia"
     __GLX_VENDOR_LIBRARY_NAME "nvidia"
-    __NV_PRIME_RENDER_OFFLOAD "1"
-    __VK_LAYER_NV_optimus "NVIDIA_only"
-    GBM_BACKEND "nvidia-drm"
     NVD_BACKEND "direct"
 }
 

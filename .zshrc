@@ -49,6 +49,9 @@ export PATH=$PATH:/opt/android-sdk/platform-tools
 export EDITOR=helix
 export XDG_CURRENT_DESKTOP="gnome"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH=/opt/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+
 
 # Shortcuts legacy Spaniol
 alias cl='clear'
@@ -66,6 +69,7 @@ alias rest='reboot'
 # Shortcuts brunofs
 alias qtdpkg='pacman -Qq | wc -l'
 alias mine='cd /home/brunofs/core && java -jar mine.jar'
+alias mine_gt='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia java -jar /home/brunofs/core/mine.jar'
 alias projects='cd ~/core/projetos/'
 alias p2='cd ~/core/fgv/cdia/p2'
 alias sourcep='source .venv/bin/activate'
