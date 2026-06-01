@@ -289,7 +289,7 @@ overview {
     }
 }
 
-
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP=niri"
 spawn-at-startup "swayidle" "-w" "before-sleep" "swaylock -f"
 spawn-at-startup "kanshi"
 spawn-at-startup "xwayland-satellite"
