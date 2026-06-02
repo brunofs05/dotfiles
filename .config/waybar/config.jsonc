@@ -1,8 +1,10 @@
 {
-  // "position": "bottom",
+  "position": "top",
   "layer": "top",
-  "height": 35,
+  "height": 32,
   "spacing": 4,
+  // "margin-right": 20,
+  // "margin-left": 20,
   "modules-left": [
     // "bluetooth",
     // "custom/music",

@@ -82,12 +82,19 @@ layout {
     }
 
     focus-ring {
-        width 1.5
+        off
+        width 2
         active-color "#FFFFFF"
     }
 
+    border {
+        width 2
+        active-color "#FFFFFF"
+        inactive-color "#1C2B28"     
+    }
+
     struts {
-        top  -12 //-7
+        top  -11 //-7
         bottom  -7 //-6
         left 8
         right 8 // -1
@@ -272,6 +279,14 @@ window-rule { // All windows
 // Make swaybg and waybar both stay in place when I change workspaces
 
 layer-rule {
+    match namespace="^waybar$"
+    background-effect {
+        blur true
+        // xray false
+    }
+}
+
+layer-rule {
     match namespace="^wallpaper$"
     match namespace="waybar"
     match at-startup=true
@@ -295,7 +310,7 @@ spawn-at-startup "kanshi"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
 spawn-at-startup "make"
-spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/brunofs/Pictures/wallpaper.jpg"
+spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/brunofs/Pictures/seagull-realesrgan.jpg"
 
 environment {
     // # XWayland
