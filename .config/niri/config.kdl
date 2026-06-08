@@ -22,6 +22,7 @@ input { keyboard {
 
     // Navigating into another window moves the cursor to its center
     warp-mouse-to-focus
+    focus-follows-mouse max-scroll-amount="20%"
 }
 
 output "DP-2" {
@@ -94,8 +95,8 @@ layout {
     }
 
     struts {
-        top  -11 //-7
-        bottom  -7 //-6
+        top  -12 //-7
+        bottom  -10 //-6
         left 8
         right 8 // -1
         }

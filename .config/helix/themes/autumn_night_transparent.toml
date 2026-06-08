@@ -30,8 +30,11 @@ my_gray6      = "#aaaaaa" # Dark Foreground (Used for status bars)
 my_gray7      = "#c4c4c4" # Light Foreground
 my_gray8      = "#e8e8e8" # Light Background
 my_green      = "#99be70" # Strings, Inherited Class, Markup Code, Diff Inserted
-my_red        = "#F05E48" # Keywords, Storage, Selector, Diff Changed
-my_turquoise1 = "#86c1b9" # Support, Regular Expressions, Escape Characters
+# my_red        = "#F05E48" # Keywords, Storage, Selector, Diff Changed
+my_red = "#388CC2"
+# my_turquoise1 = "#86c1b9" # Support, Regular Expressions, Escape Characters
+my_turquoise1 = "#329465" # Support, Regular Expressions, Escape Characters
+
 my_turquoise2 = "#72a59e" # URL
 my_white1     = "#F3F2CC" # Default Foreground, Caret, Delimiters, Operators
 my_white2     = "#F3F2CC" # Variables, XML Tags, Markup Link Text, Markup Lists, Diff Deleted
