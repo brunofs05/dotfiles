@@ -71,9 +71,7 @@ alias qtdpkg='pacman -Qq | wc -l'
 alias mine='cd /home/brunofs/core && java -jar mine.jar'
 alias mine_gt='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia java -jar /home/brunofs/core/mine.jar'
 alias projects='cd ~/core/projetos/'
-alias p2='cd ~/core/fgv/cdia/p2'
 alias sourcep='source .venv/bin/activate'
-alias p3='cd ~/core/fgv/cdia/p3'
 alias down='echo o | sudo tee /proc/sysrq-trigger'
 # alias ls='exa -a'
 alias shx='sudo HOME=$HOME helix'
@@ -81,7 +79,6 @@ alias jp='jupyter notebook'
 alias mirror='wl-mirror --fullscreen eDP-1'
 alias paclean='sudo pacman -Rns $(pacman -Qdtq)'
 alias btop='btop --force-utf'
-alias p4='cd ~/core/fgv/cdia/p4'
 alias clip='wl-copy'
 alias menrank='sudo dmidecode --type memory'
 alias mencl='sudo decode-dimms'
@@ -89,3 +86,10 @@ alias vd='visidata'
 alias timg3='timg * --title --grid=3x'
 alias hate='systemctl hibernate'
 alias dbeaver='DISPLAY=:0 dbeaver'
+
+# Added by Antigravity CLI installer
+export PATH="/home/brunofs/.local/bin:$PATH"
+
+p5() {
+    cd "/home/brunofs/core/fgv/cdia/5/$1"
+}
