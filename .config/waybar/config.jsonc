@@ -1,8 +1,8 @@
 {
   "position": "top",
   "layer": "top",
-  "height": 31,
-  "spacing": 4,
+  "height": 29,
+  "spacing": 0,
   // "margin-right": 20,
   // "margin-left": 20,
   "modules-left": [
