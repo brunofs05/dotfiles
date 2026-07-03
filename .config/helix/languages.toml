@@ -9,3 +9,19 @@ name = "cpp"
 auto-format = false
 language-servers = ["clangd"]
 indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "r"
+language-servers = ["r-languageserver"]
+
+[language-server.r-languageserver]
+command = "R"
+args = ["--no-echo", "-e", "languageserver::run()"]
+
+[language-server.tinymist]
+command = "tinymist"
+config = { exportPdf = "onSave", outputPath = "$root/target/$name" }
+
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]

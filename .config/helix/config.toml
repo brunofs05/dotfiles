@@ -11,3 +11,10 @@ hidden = false
 [keys.normal]
 "d" = "delete_selection_noyank"
 "c" = "change_selection_noyank"
+C-r = ":sh tmux send-keys -t r_repl:0.1 'source(\"main.r\")' Enter"
+
+[keys.select]
+C-c = { C-c = [":pipe-to send-to-r.sh"] }
+
+[editor.soft-wrap]
+enable = true
