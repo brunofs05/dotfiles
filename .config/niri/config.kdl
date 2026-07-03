@@ -95,7 +95,7 @@ layout {
     }
 
     struts {
-        top  -12 //-7
+        top  -11 //-7
         bottom  -10 //-6
         left 8
         right 8 // -1
@@ -272,7 +272,7 @@ window-rule { // Task manager
 
 window-rule { // All windows
     draw-border-with-background false
-    geometry-corner-radius 6 // 8
+    geometry-corner-radius 1 // 8
     clip-to-geometry true
 }
 
@@ -312,6 +312,7 @@ spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
 spawn-at-startup "make"
 spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/brunofs/Pictures/seagull-realesrgan.jpg"
+// spawn-at-startup "gnome-keyring-daemon" "--start" "--components=pkcs11,secrets,ssh"
 
 environment {
     // # XWayland
@@ -323,10 +324,6 @@ environment {
     STEAM_FORCE_DESKTOPUI_SCALING "1"
     // # Para evitar problemas com Qt em Wayland
     QT_QPA_PLATFORM "wayland;xcb"
-
-    LIBVA_DRIVER_NAME "nvidia"
-    __GLX_VENDOR_LIBRARY_NAME "nvidia"
-    NVD_BACKEND "direct"
 }
 
 animations {
