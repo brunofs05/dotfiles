@@ -68,7 +68,7 @@ alias rest='reboot'
 
 # Shortcuts brunofs
 alias qtdpkg='pacman -Qq | wc -l'
-alias mine='cd /home/brunofs/core && java -jar mine.jar'
+alias mine='gamemoderun java -jar /home/brunofs/core/mine.jar'
 alias mine_gt='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia java -jar /home/brunofs/core/mine.jar'
 alias projects='cd ~/core/projetos/'
 alias sourcep='source .venv/bin/activate'

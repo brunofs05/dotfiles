@@ -1,3 +1,9 @@
+debug {
+    // Substitua renderD129 pelo nó exato da sua GTX 1080 Ti
+    render-drm-device "/dev/dri/renderD128"
+    
+}
+
 input { keyboard {
        xkb {
             // Change keyboard
@@ -25,11 +31,10 @@ input { keyboard {
     focus-follows-mouse max-scroll-amount="20%"
 }
 
-output "DP-2" {
-    variable-refresh-rate
-    mode "1920x1080@179.961"
-
-}
+// output "DP-2" {
+//     variable-refresh-rate
+//     mode "1920x1080@179.961"
+// }
 
 // // work monitor (dell 27p FHD)
 // output "DP-1" {
@@ -283,7 +288,6 @@ layer-rule {
     match namespace="^waybar$"
     background-effect {
         blur true
-        // xray false
     }
 }
 
