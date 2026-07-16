@@ -1,6 +1,6 @@
 debug {
     // Substitua renderD129 pelo nó exato da sua GTX 1080 Ti
-    render-drm-device "/dev/dri/renderD128"
+    render-drm-device "/dev/dri/renderD129"
     
 }
 
@@ -139,7 +139,7 @@ binds {
     Alt+Space { spawn "wofi" "--show" "drun"; }
 
     Mod+L { spawn "swaylock"; }
-    Mod+F { spawn "librewolf"; }
+    Mod+F { spawn "firefox"; }
     Mod+E { spawn "nautilus"; }
     Mod+P { spawn "bash" "-c" "~/.local/bin/win-p.sh"; }
 
@@ -245,6 +245,7 @@ prefer-no-csd
 //     match is-focused=false
 //     opacity 0.8
 // }
+//
 
 window-rule { // Wi-fi manager window
     match app-id="kitty" title="wifi"
@@ -319,8 +320,12 @@ spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/brunofs/Pictures/seagull-reale
 // spawn-at-startup "gnome-keyring-daemon" "--start" "--components=pkcs11,secrets,ssh"
 
 environment {
-    // # XWayland
-    DISPLAY ":0"
+
+    __NV_PRIME_RENDER_OFFLOAD "1"
+    __GLX_VENDOR_LIBRARY_NAME "nvidia"
+    VK_DRIVER_FILES "/usr/share/vulkan/icd.d/nvidia_icd.json"
+
+    XDG_CURRENT_DESKTOP "niri"
 
     // # Para forçar o uso de XWayland com Steam
     STEAM_USE_X11 "1"
