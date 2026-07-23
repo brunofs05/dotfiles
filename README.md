@@ -50,7 +50,19 @@ sudo keyd reload
 sudo pacman -S linux-zen-headers 
 
 yay -S nvidia-580xx-dkms nvidia-580xx-utils
+```
+Ideal Files:
 
+ideal config file /etc/default/grub:
+GRUB_CMDLINE_LINUX_DEFAULT="... nvidia-drm.modeset=1 nvidia_drm.fbdev=1 nouveau.modeset=0"
+
+ideal config file /etc/modprobe.d/nvidia.conf:
+options nvidia_drm modeset=1
+
+ideal config file /etc/mkinitcpio.conf:
+MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)
+
+``` 
 sudo mkinitcpio -P
 ```
 
