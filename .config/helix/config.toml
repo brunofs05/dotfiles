@@ -6,6 +6,7 @@ insert = "bar"
 [editor.file-picker]
 git-ignore = true
 hidden = false
+parents = false
 
 # "d" copies the deleted content by default; I disabled this behaviour
 [keys.normal]
