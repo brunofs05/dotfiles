@@ -1,6 +1,6 @@
 debug {
     // Substitua renderD129 pelo nó exato da sua GTX 1080 Ti
-    render-drm-device "/dev/dri/renderD129"
+    render-drm-device "/dev/dri/renderD128"
     
 }
 
@@ -140,7 +140,7 @@ binds {
 
     Mod+L { spawn "swaylock"; }
     Mod+F { spawn "firefox"; }
-    Mod+E { spawn "nautilus"; }
+    Mod+E { spawn "thunar"; }
     Mod+P { spawn "bash" "-c" "~/.local/bin/win-p.sh"; }
 
     Mod+S { spawn "kitty" "-c" "/home/brunofs/.config/kitty/kitty-wlctl.conf" "-T" "wifi" "wlctl"; }

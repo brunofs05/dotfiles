@@ -10,7 +10,7 @@ case "$CHOSEN" in
         wlr-randr --output eDP-1 --on --pos 0,0
 
         if echo "$STATUS" | grep -q "^DP-6"; then wlr-randr --output DP-6 --off; fi
-        if echo "$STATUS" | grep -q "^DP-1"; then wlr-randr --output DP-1 --off; fi
+        if echo "$STATUS" | grep -q "^DP-2"; then wlr-randr --output DP-2 --off; fi
         if echo "$STATUS" | grep -q "^HDMI-A-1"; then wlr-randr --output HDMI-A-1 --off; fi
         ;;
 
@@ -18,8 +18,8 @@ case "$CHOSEN" in
       
         if echo "$STATUS" | grep -q "^DP-6"; then
             wlr-randr --output DP-6 --on --pos 0,0
-        elif echo "$STATUS" | grep -q "^DP-1"; then
-            wlr-randr --output DP-1 --on --pos 0,0
+        elif echo "$STATUS" | grep -q "^DP-2"; then
+            wlr-randr --output DP-2 --on --pos 0,0
         elif echo "$STATUS" | grep -q "^HDMI-A-1"; then
             wlr-randr --output HDMI-A-1 --on --pos 0,0
         fi
@@ -32,8 +32,8 @@ case "$CHOSEN" in
 
         if echo "$STATUS" | grep -q "^DP-6"; then
             wlr-randr --output DP-6 --on --pos 0,0
-        elif echo "$STATUS" | grep -q "^DP-1"; then
-            wlr-randr --output DP-1 --on --pos 0,0
+        elif echo "$STATUS" | grep -q "^DP-2"; then
+            wlr-randr --output DP-2 --on --pos 0,0
         elif echo "$STATUS" | grep -q "^HDMI-A-1"; then
             wlr-randr --output HDMI-A-1 --on --pos 0,0
         fi

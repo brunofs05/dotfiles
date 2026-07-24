@@ -69,7 +69,6 @@ alias rest='reboot'
 # Shortcuts brunofs
 alias qtdpkg='pacman -Qq | wc -l'
 alias mine='gamemoderun java -jar /home/brunofs/core/mine.jar'
-alias mine_gt='__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia java -jar /home/brunofs/core/mine.jar'
 alias projects='cd ~/core/projetos/'
 alias sourcep='source .venv/bin/activate'
 alias down='echo o | sudo tee /proc/sysrq-trigger'
@@ -85,7 +84,6 @@ alias mencl='sudo decode-dimms'
 alias vd='visidata'
 alias timg3='timg * --title --grid=3x'
 alias hate='systemctl hibernate'
-alias dbeaver='DISPLAY=:0 dbeaver'
 
 # Added by Antigravity CLI installer
 export PATH="/home/brunofs/.local/bin:$PATH"
