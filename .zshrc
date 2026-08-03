@@ -88,6 +88,6 @@ alias hate='systemctl hibernate'
 # Added by Antigravity CLI installer
 export PATH="/home/brunofs/.local/bin:$PATH"
 
-p5() {
-    cd "/home/brunofs/core/fgv/cdia/5/$1"
+p6() {
+    cd "/home/brunofs/core/fgv/cdia/6/$1"
 }

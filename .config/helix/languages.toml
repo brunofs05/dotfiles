@@ -42,3 +42,12 @@ language-servers = ["vscode-html-language-server"]
 [[language]]
 name = "javascript"
 language-servers = ["typescript-language-server"]
+
+[language-server.lean]
+command = "lake"
+args = ["serve"]
+
+[[language]]
+name = "lean"
+roots = ["lakefile.lean", "lakefile.toml"]
+language-servers = ["lean"]
