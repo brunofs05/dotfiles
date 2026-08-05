@@ -93,3 +93,18 @@ sudo mkinitcpio -P
 # reboot
 # systemctl hibernate
 ```
+
+### Configure vpn to watch Grêmio FPA match
+```
+yay -S cloudflare-warp-bin
+```
+```
+sudo systemctl enable --now warp-svc
+systemctl status warp-svc
+```
+```
+warp-cli registration new
+```
+```
+warp-cli connec
+```
