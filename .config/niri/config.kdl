@@ -1,7 +1,6 @@
 debug {
     // Substitua renderD129 pelo nó exato da sua GTX 1080 Ti
     render-drm-device "/dev/dri/renderD128"
-    
 }
 
 input { keyboard {
@@ -60,10 +59,10 @@ input { keyboard {
 //     position x=0 y=0
 // }
 
-// // external screen by hp (LG 24p FHD)
+// external screen by hp (LG 24p FHD)
 // output "HDMI-A-1" {
 //     scale 1
-//     mode "1920x1080@179.961"
+//     mode "1920x1080@179" 
 //     position x=0 y=0
 // }
 
@@ -100,8 +99,8 @@ layout {
     }
 
     struts {
-        top  -11 //-7
-        bottom  -10 //-6
+        top   -11 //-7
+        bottom   -10 //-6
         left 8
         right 8 // -1
         }
@@ -206,12 +205,12 @@ binds {
     Alt+C { center-window; }
 
     // Column width
-    Alt+Minus { set-column-width "-10%"; }
-    Alt+Equal { set-column-width "+10%"; }
+    Alt+Minus { set-column-width "-5%"; }
+    Alt+Equal { set-column-width "+5%"; }
 
     // Window height
-    Alt+Shift+Minus { set-window-height "-10%"; }
-    Alt+Shift+Equal { set-window-height "+10%"; }
+    Alt+Shift+Minus { set-window-height "-5%"; }
+    Alt+Shift+Equal { set-window-height "+5%"; }
 
     // Floating window behaviour
     Alt+Shift+W { toggle-window-floating; }
@@ -239,7 +238,7 @@ hotkey-overlay {
 screenshot-path "~/Pictures/Screenshots/Screenshot-%Y%m%d-%H%M%S.png"
 
 // Asks new windows to disable its client-side decorations
-prefer-no-csd
+// prefer-no-csd
 
 // window-rule {
 //     match is-focused=false
