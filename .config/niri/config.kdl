@@ -150,6 +150,7 @@ binds {
     XF86AudioRaiseVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "+5%"; }
     XF86AudioLowerVolume { spawn "pactl" "set-sink-volume" "@DEFAULT_SINK@" "-5%"; }
     XF86AudioMute        { spawn "pactl" "set-sink-mute" "@DEFAULT_SINK@" "toggle"; }
+    Mod+A { spawn "bash" "-c" "~/.local/bin/audio-jack.sh toggle"; }
 
 
     XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-"; }
@@ -314,15 +315,16 @@ spawn-at-startup "swayidle" "-w" "before-sleep" "swaylock -f"
 spawn-at-startup "kanshi"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
-spawn-at-startup "make"
+spawn-at-startup "bash" "-c" "~/.local/bin/audio-jack.sh watch"
+// spawn-at-startup "mako"
 spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/brunofs/Pictures/seagull-realesrgan.jpg"
 // spawn-at-startup "gnome-keyring-daemon" "--start" "--components=pkcs11,secrets,ssh"
 
 environment {
 
-    __NV_PRIME_RENDER_OFFLOAD "1"
-    __GLX_VENDOR_LIBRARY_NAME "nvidia"
-    VK_DRIVER_FILES "/usr/share/vulkan/icd.d/nvidia_icd.json"
+    // __NV_PRIME_RENDER_OFFLOAD "1"
+    // __GLX_VENDOR_LIBRARY_NAME "nvidia"
+    // VK_DRIVER_FILES "/usr/share/vulkan/icd.d/nvidia_icd.json"
 
     XDG_CURRENT_DESKTOP "niri"
 
